@@ -1,0 +1,35 @@
+.nuevaVenta {
+  color: #b31237;
+}
+
+.btn-buscar {
+  background-color: #ff8826 !important;
+  color: #fff !important;
+}
+.btn-agregar {
+  margin-top: 32px;
+  color: #fff;
+  background-color: #ffb914;
+}
+
+.btn-borrar {
+  color: #fff;
+  background-color: #f03813;
+}
+.btn-facturar {
+  color: #fff;
+  background-color: #2c9fa3;
+}
+
+.eliminarProducto i {
+  color: #f03813;
+}
+
+ul {
+  background-color:#eee;  
+  cursor:pointer;
+}
+
+ul li {
+  padding: 12px;
+}

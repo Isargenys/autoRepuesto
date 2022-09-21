@@ -1,0 +1,65 @@
+.btn-editar {
+  background-color: #ffb914;
+  color: #ffff;
+  padding: 8px;
+  width: 19%;
+  border-radius: 8px;
+}
+
+.btn-delete {
+  background-color: #f03813;
+  color: #ffff;
+  padding: 8px;
+  width: 19%;
+  border-radius: 8px;
+}
+
+.btn-detalles {
+  background-color: #2c9fa3;
+  color: #ffff;
+  padding: 8px;
+  width: 19%;
+  border-radius: 8px;
+}
+
+.btn-buscar {
+  background-color: #ff8826 !important;
+}
+
+.tittulo-table th {
+  color: #b31237;
+  font-size: 18px;
+}
+
+/* MODAL DETALLES */
+
+.footer-detalles button {
+  background-color: #f03813 !important;
+  color: #fff !important;
+}
+
+.titulo-producto {
+  color: #2c9fa3;
+}
+
+.titulo-modalDetalles {
+  color: #b31237;
+}
+
+.btn-cancelarProductos {
+  background-color: #f03813 !important;
+  color: #fff !important;
+}
+
+.btn-guardarProductos {
+  background-color: #2c9fa3 !important;
+  color: #fff !important;
+}
+
+.formProductos label {
+  color: #b31237;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+table { text-align: center; }
