@@ -15,7 +15,7 @@
         </a>
         <div class="collapse" id="collapseInventario">
             <div class="list-group">
-            <a href="productos.php" class="list-group-item  submenu ">Productos</a>
+            <a href="servicios.php" class="list-group-item  submenu ">Servicios</a>
             </div>
         </div>
         <a class="list-group-item   p-3" data-bs-toggle="collapse" href="#collapseTienda">

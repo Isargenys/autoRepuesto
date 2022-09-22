@@ -30,10 +30,10 @@ values ("Felix", "Veras", "849-452-8882", "FelixAVeras", "fcarvajal@gmail.com", 
 ("Isargenys", "Contreras", "849-220-2882", "Isargenys", "isargenys@gmail.com", "123456"),
 ("Emmy", "Ogando", "", "Nathanael", "", "123456"),
 
-create table Orden(
-  OrdenID int not null primary key AUTO_INCREMENT,
-  NombreCliente varchar(100),
-  OrderItem varchar(100) not null,
-  MontoTotal decimal(6,2) not null,
-  FechaVenta datetime not null 
-);
+-- create table Orden(
+--   OrdenID int not null primary key AUTO_INCREMENT,
+--   NombreCliente varchar(100),
+--   OrderItem varchar(100) not null,
+--   MontoTotal decimal(6,2) not null,
+--   FechaVenta datetime not null 
+-- );

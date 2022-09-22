@@ -1,5 +1,5 @@
 <?php
-session_start();
+/*session_start();
  
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     header("location: dashboard.php");
@@ -60,7 +60,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
 	unset($connection);
-}
+}*/
 ?>
 
 <!DOCTYPE html>

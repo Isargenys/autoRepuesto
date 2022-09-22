@@ -12,7 +12,7 @@
                 <li class="nav-item dropdown navTitulo">
                     <a class="nav-link dropdown-toggle fw-bold " id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="bi bi-person-workspace"></i> 
-                     &nbsp; <?php echo htmlspecialchars($_SESSION["username"]); ?>
+                     &nbsp; <?php //echo htmlspecialchars($_SESSION["username"]); ?>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item text-center" href="#!">
