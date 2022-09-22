@@ -13,38 +13,38 @@ $username_err = $password_err = $login_err = "";
  
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
-    if(empty(trim($_POST["username"]))){
+    if(empty(trim($_POST["NombreUsuario"]))){
         $username_err = "Por favor, ingresa un nombre de usuario.";
     } else{
-        $username = trim($_POST["username"]);
+        $username = trim($_POST["NombreUsuario"]);
     }
     
-    if(empty(trim($_POST["password"]))){
+    if(empty(trim($_POST["Password"]))){
         $password_err = "Por favor, ingresa una contraseña.";
     } else{
         $password = trim($_POST["password"]);
     }
     
     if(empty($username_err) && empty($password_err)){
-        $sql = "SELECT idusuario, username, password FROM usuario WHERE username = :username";
+        $sql = "SELECT UsuarioID, NombreUsuario, password FROM usuarios WHERE NombreUsuario = :NombreUsuario";
         
         if($stmt = $connection->prepare($sql)){
-            $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
+            $stmt->bindParam(":NombreUsuario", $param_username, PDO::PARAM_STR);
             
-			$param_username = trim($_POST["username"]);
+			$param_username = trim($_POST["NombreUsuario"]);
             
 			if($stmt->execute()){
                 if($stmt->rowCount() == 1){
                     if($row = $stmt->fetch()){
-                        $id = $row["idusuario"];
-                        $username = $row["username"];
-                        $hashed_password = $row["password"];
+                        $id = $row["UsuarioID"];
+                        $username = $row["NombreUsuario"];
+                        $hashed_password = $row["Password"];
                         
 						session_start();
                             
                         $_SESSION["loggedin"] = true;
-						$_SESSION["idusuario"] = $id;
-						$_SESSION["username"] = $username;                            
+						$_SESSION["UsuarioID"] = $id;
+						$_SESSION["NombreUsuario"] = $username;                            
                         
 						header("location: dashboard.php");
                     }
@@ -91,12 +91,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					<div class="card-body mt-3">
 						<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 							<div class="form-group mb-3 text-white">
-								<label for="username" class="mb-2">Nombre de Usuario</label>
+								<label for="NombreUsuario" class="mb-2">Nombre de Usuario</label>
 								<div class="input-group mb-3">
 								  <span class="input-group-text" id="basic-addon1">
 								  	<i class="bi bi-person-fill"></i>
 								  </span>
-								  <input type="text" class="form-control" id="username" name="username">
+								  <input type="text" class="form-control" id="NombreUsuario" name="NombreUsuario">
 								</div>
 							</div>
 							<div class="form-group mb-3 text-white">
@@ -105,7 +105,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 								  <span class="input-group-text" id="basic-addon1">
 								  	<i class="bi bi-lock-fill"></i>
 								  </span>
-								  <input type="password" class="form-control" id="password" name="password">
+								  <input type="password" class="form-control" id="password" name="Password">
 								</div>
 							</div>
 							<div class="mt-4 mb-3 d-flex justify-content-center gap-2">
